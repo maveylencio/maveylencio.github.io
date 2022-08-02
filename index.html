@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="shortcut icon" href="#">
+    <title>Sorting Visualizer</title>
+  </head>
+  <body>
+      <div class='nav'>
+        <h1>Sorting Algorithms Visualizer</h1>
+        <ul>
+        <li id='range-holder'>
+            <span>List Size</span>
+            <input id='listSizeRange' type="range" min=5 max=150  value=75>
+            <span>Animation Speed</span>
+            <input id='speedrange' type="range" min=4 max=200  value=4 >
+        </li>
+        <li id='generateBtn'>
+            <a href="#" id='newset' class="header-link" >Generate New Set</a>
+        </li>
+
+        <li id='algorithm-holder'>
+            <ul id='algorithms-list'>
+                <li id='bubble'>Bubble Sort</li>
+                <li id='insertion'>Insertion Sort</li>
+                <li id='selection'>Selection Sort</li>
+                <li id = 'quick'>Quick Sort</li>
+                <li id='merge'>Merge Sort</li>
+                <li id = 'heap'>Heap Sort</li>
+           </ul>
+        </li>
+      </ul>
+      </div>
+
+    <div class="container">
+         <div class="list-container"></div>
+    </div>
+
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="src/index.js"></script>
+    <script type="module" src="src/sortingalgorithm.js"></script>
+
+    
+    
+    
+  </body>
+</html>

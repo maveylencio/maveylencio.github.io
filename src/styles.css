@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    color:rgb(9, 137, 126);
+}
+
+body{
+    height:100vh;
+    background: rgb(40, 39, 39);
+}
+
+.nav{
+    width:100%;
+    padding: 1rem;
+    list-style: none;
+    background:#e9e7e7;
+    color:rgb(9, 137, 126);
+}
+
+.nav h1{
+    grid-area: title;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 450px;
+    margin-bottom: 1.5rem;
+    display: block;
+    width: 100%;
+
+}
+.nav h1::before{
+    content:'';
+    background:rgb(4, 135, 135);
+    width:28.5rem;
+    height:0.2rem;
+    position:absolute;
+    top:5rem;
+
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.nav li a{
+    text-decoration: none;
+    font-size:1.5rem;
+    font-weight: bold;
+    margin:3px;
+    padding:5px;
+    padding-right:5rem;
+    position:relative;
+    color:#666;
+    transition: color 0.3s linear;
+}
+
+
+#range-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: range;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#range-holder input{
+    margin:8px;
+}
+
+#generateBtn{
+    display: grid;
+    place-items: center; 
+    transition:all 0.3s ease-in;
+    grid-area:generate;
+}
+
+#newset{
+    color:rgb(9, 137, 126);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+@keyframes widthAnimation{
+    from{
+        width: 1rem;
+    }
+    to{
+        width: 15rem;
+    }
+}
+
+#algorithm-holder{
+    grid-area:algos;
+}
+
+#algorithms-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+#algorithms-list li{
+    font-size: 1.2rem;
+    font-weight: 1000;
+    margin-left:1rem;
+    padding: 0.6rem;
+    box-shadow: 1px 1px 4px rgb(76, 74, 74), 2px 2px 3px rgb(102, 101, 101);
+    cursor: pointer;
+    transition:all 0.4s;
+    position: relative;
+}
+
+#algorithms-list li:hover{
+    top:0.1rem;
+    left:0.1rem;
+    color:rgb(4, 134, 134);
+}
+
+#algorithms-list li.active{
+    box-shadow:  2px 2px 10px rgb(151, 150, 150), 2px 2px 10px #fff;
+    top:0.1rem;
+    left:0.1rem;
+    color:rgb(4, 134, 134);
+}
+
+#algorithms-list li.disabled{
+    box-shadow:  inset 2px 2px 4px rgb(151, 150, 150), inset 2px 2px 3px #fff;
+    color:#ccc;
+}
+
+#algorithms-list li.disabled:hover{
+    top:0;
+    left:0;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:62%;
+   
+}
+.list-container{
+    width:90%;
+    height:100%;
+    margin-top: 20px; 
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+.number{
+    background:rgb(10, 162, 218);
+    height:50px;
+    width:1px;
+    margin-right:2px;
+    text-align: center;
+    font-size: 1.1rem;
+    color:#f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.number.visiting{
+    background: rgb(0, 255, 102);
+}
+.number.wrong-position{
+    background:rgb(193, 196, 5);
+}
+.number.correct-position{
+    background:rgb(165, 7, 197);
+}
+
+
+
+
+@media screen and (max-width: 770px) {
+    :root{
+        font-size: 10px;
+    }
+    
+    .nav h1::before{
+        width:20rem;
+    }
+    .nav ul{
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .nav input[type='range']{
+        width: 10rem;
+    }
+    .list-container{
+        width: 100%;
+        height:99%;
+    }
+  }
