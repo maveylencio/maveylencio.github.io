@@ -1,4 +1,4 @@
-# Sorting-Visualizer
+# Sorting Visualizer
  
 Welcome to my Sorting Visualizer! This project was built based on my interest for learning Sorting algorithm and  
 I decided I would do so by building a visualizer to help me better understand the concepts. I hope that you enjoy playing
